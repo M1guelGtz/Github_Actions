@@ -23,7 +23,7 @@ jobs:
               run: nohup ./main &
             - name: Check server status
               run: |
-                response=$(curl http://localhost:8000/status)
+                RESPONSE=$(curl http://localhost:8000/status)
                 if 
                     echo "$RESPONSE" | grep -q '"status":"OK"';then 
                     echo "server is running status: ok"
